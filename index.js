@@ -12,7 +12,7 @@ import './index.scss'; // Yep, that's right. You can import SASS/CSS files too! 
 var BuckysComponent = React.createClass({
          render: function() {
              return (
-                     <h2>My name is Bucky</h2>
+                     <h2>My name is 34 Bucky</h2>
              );
          }
      });
