@@ -6,6 +6,6 @@ import App from './components/app/app';
 
 require('./favicon.ico'); // Tell webpack to load favicon.ico
 
-render(
+render( 
   <App/>, document.getElementById('app')
 );
