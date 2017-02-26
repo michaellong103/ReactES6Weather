@@ -2,21 +2,10 @@
 
 import React from 'react';
 import {render} from 'react-dom';
-import { Provider } from 'react-redux';
-import { Router, browserHistory } from 'react-router';
-import routes from './routes';
-import configureStore from './store/configureStore';
-require('./favicon.ico'); // Tell webpack to load favicon.ico
-import './index.scss'; // Yep, that's right. You can import SASS/CSS files too! Webpack will run the associated loader and plug this into the page.
+import App from './components/app/app';
 
-var BuckysComponent = React.createClass({
-         render: function() {
-             return (
-                     <h2>My name is 34 Bucky</h2>
-             );
-         }
-     });
+require('./favicon.ico'); // Tell webpack to load favicon.ico
 
 render(
-  <BuckysComponent/>, document.getElementById('app')
+  <App/>, document.getElementById('app')
 );
