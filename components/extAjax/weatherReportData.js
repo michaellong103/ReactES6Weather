@@ -25,7 +25,8 @@ export default class WeatherReportData extends React.Component {
     console.log(this.state);
     var days = this.state.weatherdata.map(function(day, index){
       if(index < 5){
-       return <TDay thigh={Math.round(day.temperatureMax)} tlow={Math.round(day.temperatureMin)} tcolor='red' />
+      console.log(day.icon);
+       return <TDay thigh={Math.round(day.temperatureMax)} tlow={Math.round(day.temperatureMin)}  ticon={day.icon} />
       }
     });
     return <span>
