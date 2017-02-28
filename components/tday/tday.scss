@@ -1,0 +1,24 @@
+
+.tday {
+  float:left;
+  margin-left:2%;
+  min-width:70px;
+  width:15%;
+  .tdaytop, .tdaybottom{
+    height:40px;
+    text-align: center;
+    font-size: 2.8em;
+    line-height: .7em;
+    padding-top:.2em;
+  }
+  .tdaygraph{
+    height:280px;
+    background-color: #dedede;
+  }
+  .tdaycolor{
+    background-color:orange;
+    width:100%;
+    display: inline-block;
+
+  }
+}
