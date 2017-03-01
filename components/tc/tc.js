@@ -10,7 +10,7 @@ export default class TC extends React.Component {
         <div  className='tc-color-scale'>
             <div></div>
         </div>
-        <div  className='tc-text-bottom'>40&#176;</div>
+        <div  className='tc-text-bottom'>30&#176;</div>
         <div  className='tc-bottom-spacer'></div>
       </div>
     );

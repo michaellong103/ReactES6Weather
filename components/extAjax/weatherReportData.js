@@ -38,7 +38,7 @@ export default class WeatherReportData extends React.Component {
 // Steattle
 
 const darkSkyApi = () => {
-  return fetch(`https://www.rehablinks.org/_dev/phpproxy/index.php?https://api.darksky.net/forecast/e07a7a457fa43398847b9500a72b8cbf/37.8267,-122.4233`)
+  return fetch(`https://www.rehablinks.org/_dev/phpproxy/index.php?https://api.darksky.net/forecast/e07a7a457fa43398847b9500a72b8cbf/47.608013,-122.335167`)
   .then(function(response) {
     return response.json();
   }).then(function(data) {
