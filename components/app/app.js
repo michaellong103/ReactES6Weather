@@ -7,7 +7,6 @@ export default class App extends Component {
   render() {
     return (
       <div>
-      <div>5 Day Forcast</div>
       <TempTool />
       </div>
     );

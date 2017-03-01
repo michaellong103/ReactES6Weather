@@ -7,6 +7,16 @@ export default class TDay extends React.Component {
   constructor() {
     super()
   }
+  getIcon(type, cbar){
+    var icontyle = {
+        'snow':    <TiWeatherSnow        style={{ color: cbar, fontSize: '80' }} />,
+        'cloudy':  <TiWeatherCloudy      style={{ color: cbar, fontSize: '80' }}  />,
+        'sun':     <TiWeatherPartlySunny style={{ color: cbar, fontSize: '80' }} />,
+        'rain':    <TiWeatherShower      style={{ color: cbar, fontSize: '80' }} />,
+        'default': <TiWeatherPartlySunny style={{ color: cbar, fontSize: '80' }} />,
+      };
+      return  (icontyle[type] || icontyle['default']);
+  }
   render() {
     let fullheight =  280;
     let maxTemp =  70;
@@ -26,17 +36,6 @@ export default class TDay extends React.Component {
     "#ff9601" ];
     let barColor = colorArray[(Math.ceil((100  - (colorMarker * 100))/ 10) * 10) *  .1];
 
-    function getIcon (type, cbar) {
-      var icontyle = {
-        'snow':    <TiWeatherSnow        style={{ color: cbar, fontSize: '80' }} />,
-        'cloudy':  <TiWeatherCloudy      style={{ color: cbar, fontSize: '80' }}  />,
-        'sun':     <TiWeatherPartlySunny style={{ color: cbar, fontSize: '80' }} />,
-        'rain':    <TiWeatherShower      style={{ color: cbar, fontSize: '80' }} />,
-        'default': <TiWeatherPartlySunny style={{ color: cbar, fontSize: '80' }} />,
-      };
-      return  (icontyle[type] || icontyle['default']);
-    }
-
 
     return (
       <div className='tday'>
@@ -45,7 +44,7 @@ export default class TDay extends React.Component {
       <div className='tdaycolor'  style={{backgroundColor: barColor, marginTop: barTopPx, height: barHeightPx}}></div>
       </div>
       <div className='tdaybottom'>{this.props.tlow}&#176;</div>
-      <span >{getIcon(this.props.ticon, barColor)}</span>
+      <span >{this.getIcon(this.props.ticon, barColor)}</span>
       </div>
     );
   }
