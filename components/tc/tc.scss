@@ -12,7 +12,6 @@
   .tc-color-scale{
     height:240px;
     font-size: 1em;
-
     div{
       background-color: #fec426; // Old browsers
       // Needs latest Compass, add '@import "compass"' to your scss
@@ -30,5 +29,11 @@
     font-size: 1em;
     height:20px;
     text-align: center;
+  }
+  .tc-upper-spacer, .tc-bottom-spacer {
+    font-size: 1em;
+    line-height: 1.2em;
+    text-align: center;
+    padding-top: 16px;
   }
 }
