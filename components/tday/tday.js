@@ -35,10 +35,9 @@ export default class TDay extends React.Component {
     "#ffc506",
     "#ff9601" ];
     let barColor = colorArray[(Math.ceil((100  - (colorMarker * 100))/ 10) * 10) *  .1];
-
-
-    return (
+    return ( 
       <div className='tday'>
+      <div className='tdaydate'>{this.props.ttime}</div>
       <div className='tdaytop'>{this.props.thigh}&#176;</div>
       <div className='tdaygraph'>
       <div className='tdaycolor'  style={{backgroundColor: barColor, marginTop: barTopPx, height: barHeightPx}}></div>

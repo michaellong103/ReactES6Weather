@@ -22,11 +22,14 @@ export default class WeatherReportData extends React.Component {
 
   render() {
     const { weatherdata } = this.state;
-    console.log(this.state);
     var days = this.state.weatherdata.map(function(day, index){
       if(index < 5){
-      console.log(day.icon);
-       return <TDay thigh={Math.round(day.temperatureMax)} tlow={Math.round(day.temperatureMin)}  ticon={day.icon} />
+       var t = day.time * 1000;
+       let a = new Date(t);
+       let months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+       let tdate  = months[a.getMonth()] + ' ' + a.getDate().toString();
+       console.log(tdate);
+       return <TDay ttime={tdate} thigh={Math.round(day.temperatureMax)} tlow={Math.round(day.temperatureMin)}  ticon={day.icon} />
       }
     });
     return <span>
