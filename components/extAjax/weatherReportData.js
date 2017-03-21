@@ -9,7 +9,6 @@ export default class WeatherReportData extends React.Component {
       weatherdata: []
     }
   }
-
   componentDidMount() {
     darkSkyApi().then(data => {
       // console.log('data');
@@ -18,9 +17,6 @@ export default class WeatherReportData extends React.Component {
         weatherdata: data.daily.data
       });
     })
-  }
-
-  render() {
     const { weatherdata } = this.state;
     var days = this.state.weatherdata.map(function(day, index){
       if(index < 5){
@@ -39,7 +35,7 @@ export default class WeatherReportData extends React.Component {
 }
 
 // Steattle
-
+ 
 const darkSkyApi = () => {
   return fetch(`https://www.rehablinks.org/_dev/phpproxy/index.php?https://api.darksky.net/forecast/e07a7a457fa43398847b9500a72b8cbf/47.609722,-122.333056`)
   .then(function(response) {

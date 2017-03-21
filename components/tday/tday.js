@@ -8,6 +8,8 @@ export default class TDay extends React.Component {
     super()
   }
   getIcon(type, cbar){
+    console.log(type);
+    console.log(cbar);
     var icontyle = {
         'snow':    <TiWeatherSnow        style={{ color: cbar, fontSize: '80' }} />,
         'cloudy':  <TiWeatherCloudy      style={{ color: cbar, fontSize: '80' }}  />,
@@ -35,7 +37,7 @@ export default class TDay extends React.Component {
     "#ffc506",
     "#ff9601" ];
     let barColor = colorArray[(Math.ceil((100  - (colorMarker * 100))/ 10) * 10) *  .1];
-    return ( 
+    return (
       <div className='tday'>
       <div className='tdaydate'>{this.props.ttime}</div>
       <div className='tdaytop'>{this.props.thigh}&#176;</div>
